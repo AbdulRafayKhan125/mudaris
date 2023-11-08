@@ -130,6 +130,32 @@ gsap.to('.wrraper>a',{
   opacity:0,
 })
 
+gsap.from('.top2 , .btm2',{
+  opacity:0,
+  duration:1,
+  scale:0.9,
+  y:100,
+  stagger:0.5,
+  ease:"power2",
+  scrollTrigger:{
+    trigger:".top2,btm2",
+    scroller:"#main",
+    start:"top 70%"
+  }
+})
+
+gsap.from('.vid',{
+  opacity:0,
+  duration:1,
+  scale:0.9,
+  scrollTrigger:{
+    start:"top 70%",
+    scroller:"#main",
+    trigger:".vid",
+  }
+})
+
+
 var mu = new gsap.timeline()
 
 mu.from('#container',{
@@ -180,28 +206,5 @@ mu.to('.wrraper>a',{
   duration:0.7,
   yoyo:true,
 })
-
-
-gsap.from('#section2',{
-  opacity:0,
-  duration:1.2,
-})
-
-gsap.from('.sec3top>h1',{
-  opacity:0,
-  duration:1.2,
-  y:-100,
-
-})
-
-gsap.from('#sec3a-top',{
-  y:100,
-  duration:1,
-  delay:3,
-  opacity:0,
-  
-}
-)
-
 
 
